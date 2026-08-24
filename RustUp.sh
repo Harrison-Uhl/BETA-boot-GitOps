@@ -1,9 +1,11 @@
 #!/bin/bash
+# https://github.com/Harrison-Uhl/BETA-boot-GitOps/RustUp.sh
+# Entry point to load & Run RustUp bundle
+
 # --- Usage:
-# export GitOpsUrl=https://raw.githubusercontent.com/Harrison-Uhl/BETA-boot-GitOps/master
+# export GitOpsUrl=https://github.com/Harrison-Uhl/BETA-boot-GitOps
 # git clone --depth 1 --single-branch -b main $GitOpsUrl
 # cat RustUp.sh
 
-#xxx??  curl -fSL $WptlGit/cfSrvRootFSH -o $Srv/env/cfSrvRootFSH.env 
+set +euxo
 
-# httpsRustUp.sh
