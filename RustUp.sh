@@ -5,6 +5,8 @@
 # --- Usage:
 # export GitOpsUrl=https://github.com/Harrison-Uhl/BETA-boot-GitOps
 # git clone --depth 1 --single-branch -b main $GitOpsUrl
+
+cd BETA-boot-GitOps
 # cat RustUp.sh
 
 set +euxo
