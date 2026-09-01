@@ -21,3 +21,18 @@ source "$HOME/.cargo/env"
 # 3. Verify total tool environment status flags
 echo '--- Versions ---'
 rustc --version && cargo --version
+
+mkdir -p ./rustprojects/helloworld
+cd ./rustprojects/helloworld
+
+##nano hello.rs
+
+cat >hello.rs <<EOF
+fn main() {
+    println!("Congratulations! Rust is installed, compiling and running.");
+}
+EOF
+
+rustc hello.rs
+./hello
+
