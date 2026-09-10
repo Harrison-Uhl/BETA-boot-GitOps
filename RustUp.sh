@@ -4,15 +4,17 @@
 
 # --- Usage:
 # export GitOpsUrl=https://github.com/Harrison-Uhl/BETA-boot-GitOps
-# git clone --depth 1 --single-branch -b main $GitOpsUrl
+git clone --depth 1 --single-branch -b main $GitOpsUrl
 
-cd BETA-boot-GitOps
+cd ./BETA-boot-GitOps
 # cat RustUp.sh
+
 
 set +euxo
 
 # Add the following early to avoid warnings during RuspUP...
-sudo dnf install cc clang cmake curl   gcc   lld llvm   make  -y
+#  No cc (it's included in gcc (for Rocky 10.2, dnf4)
+sudo dnf install  clang cmake curl   gcc   lld llvm   make  -y
 
 # 1. Initialize Rustup silently passing automatic defaults (-y)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
