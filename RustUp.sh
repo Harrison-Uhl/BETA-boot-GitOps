@@ -12,7 +12,7 @@ cd BETA-boot-GitOps
 set +euxo
 
 # Add the following early to avoid warnings during RuspUP...
-sudo dnf install cmake gcc make curl clang llvm lld -y
+sudo dnf install cc clang cmake curl   gcc   lld llvm   make  -y
 
 # 1. Initialize Rustup silently passing automatic defaults (-y)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -35,4 +35,10 @@ EOF
 
 rustc hello.rs
 ./hello
+echo "###################\n"
+
+cargo new /tmp/hello-smoke && cargo run --manifest-path /tmp/hello-smoke/Cargo.toml
+
+
+
 
